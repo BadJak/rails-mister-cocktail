@@ -18,7 +18,9 @@
             <%= cl_image_tag("useht7uyfpewjotxxoge", width: 400, crop: :fill, class: "card-img-top") %>
 
           <% end %>
-
+          <% if cocktail.photo.present? %>
+          <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+          <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= cocktail.name %></h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
