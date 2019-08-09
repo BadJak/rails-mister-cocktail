@@ -1,0 +1,27 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to cocktails_path, class: "navbar-brand" do %>
+      <%= image_tag "https://cdn3.iconfinder.com/data/icons/food-and-drink-round-filled-line/48/Cocktail-Food-Round-Icon-Filled-Line-512.png", class: "mb-2" %>
+      <span>Cocktail-Ville</span>
+    <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Add Cocktails", new_cocktail_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
