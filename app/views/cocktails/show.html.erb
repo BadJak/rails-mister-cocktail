@@ -2,18 +2,18 @@
 <div class="container my-3">
 <h1>My Cocktail</h1>
   <div class="card my-3" style="width: 32rem;">
-    <% if @cocktail.id == 9 %>
-          <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=686&q=80" class="card-img-top" alt="...">
-          <% elsif @cocktail.id == 10 %>
-            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
-          <% elsif @cocktail.id == 11 %>
-            <img src="https://images.unsplash.com/photo-1542600176-9d2c4bb4bc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80" class="card-img-top" alt="...">
-          <% elsif @cocktail.id == 12 %>
-            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
-          <% elsif @cocktail.id == 13 %>
-            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80" class="card-img-top" alt="...">
-          <% elsif @cocktail.id == 14 %>
-            <img src="https://images.unsplash.com/photo-1550555179-ba6377f4b5ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80" class="card-img-top" alt="...">
+   <% if cocktail.id == 2 %>
+          <%= cl_image_tag("ijnerorsrva13i8nfm5d", width: 400, height: 300, crop: :fill) %>
+          <% elsif cocktail.id == 3 %>
+            <%= cl_image_tag("d71xc3cwqdtrkgvr5z9yY", width: 400, height: 300, crop: :fill) %>
+          <% elsif cocktail.id == 4 %>
+            <%= cl_image_tag("webxtunempbajzqvekaw", width: 400, height: 300, crop: :fill) %>
+          <% elsif cocktail.id == 5 %>
+            <%= cl_image_tag("vi05oda4ue5syczmbdrx", width: 400, height: 300, crop: :fill) %>
+          <% elsif cocktail.id == 6 %>
+            <%= cl_image_tag("ifsoadbabeekoylisgko", width: 400, height: 300, crop: :fill) %>
+          <% elsif cocktail.id == 7 %>
+            <%= cl_image_tag("useht7uyfpewjotxxoge", width: 400, height: 300, crop: :fill) %>
 
           <% end %>
     <div class="card-body">
