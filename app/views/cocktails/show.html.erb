@@ -2,20 +2,21 @@
 <div class="container my-3">
 <h1>My Cocktail</h1>
   <div class="card my-3" style="width: 32rem;">
-   <% if cocktail.id == 2 %>
-          <%= cl_image_tag("ijnerorsrva13i8nfm5d", width: 400, height: 300, crop: :fill) %>
-          <% elsif cocktail.id == 3 %>
-            <%= cl_image_tag("d71xc3cwqdtrkgvr5z9yY", width: 400, height: 300, crop: :fill) %>
-          <% elsif cocktail.id == 4 %>
-            <%= cl_image_tag("webxtunempbajzqvekaw", width: 400, height: 300, crop: :fill) %>
-          <% elsif cocktail.id == 5 %>
-            <%= cl_image_tag("vi05oda4ue5syczmbdrx", width: 400, height: 300, crop: :fill) %>
-          <% elsif cocktail.id == 6 %>
-            <%= cl_image_tag("ifsoadbabeekoylisgko", width: 400, height: 300, crop: :fill) %>
-          <% elsif cocktail.id == 7 %>
-            <%= cl_image_tag("useht7uyfpewjotxxoge", width: 400, height: 300, crop: :fill) %>
+      <% if @cocktail.id == 2 %>
+          <%= cl_image_tag("ijnerorsrva13i8nfm5d", width: 400, crop: :fill, class: "card-img-top") %>
+          <% elsif @cocktail.id == 3 %>
+            <%= cl_image_tag("d71xc3cwqdtrkgvr5z9y", width: 400, crop: :fill, class: "card-img-top") %>
+          <% elsif @cocktail.id == 4 %>
+            <%= cl_image_tag("webxtunempbajzqvekaw", width: 400, crop: :fill, class: "card-img-top") %>
+          <% elsif @cocktail.id == 5 %>
+            <%= cl_image_tag("vi05oda4ue5syczmbdrx", width: 400, crop: :fill, class: "card-img-top") %>
+          <% elsif @cocktail.id == 6 %>
+            <%= cl_image_tag("ifsoadbabeekoylisgko", width: 400, crop: :fill, class: "card-img-top") %>
+          <% elsif @cocktail.id == 7 %>
+            <%= cl_image_tag("useht7uyfpewjotxxoge", width: 400, crop: :fill, class: "card-img-top") %>
 
           <% end %>
+
     <div class="card-body">
         <h5 class="card-title text-align-center"><%= @cocktail.name %></h5>
         <p class="card-text">
