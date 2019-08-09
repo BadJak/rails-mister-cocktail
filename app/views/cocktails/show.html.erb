@@ -1,54 +1,47 @@
 
 <div class="container my-3">
-<h1>My Cocktail</h1>
-  <div class="card my-3" style="width: 32rem;">
-      <% if @cocktail.id == 2 %>
-          <%= cl_image_tag("ijnerorsrva13i8nfm5d", width: 400, crop: :fill, class: "card-img-top") %>
-          <% elsif @cocktail.id == 3 %>
-            <%= cl_image_tag("d71xc3cwqdtrkgvr5z9y", width: 400, crop: :fill, class: "card-img-top") %>
-          <% elsif @cocktail.id == 4 %>
-            <%= cl_image_tag("webxtunempbajzqvekaw", width: 400, crop: :fill, class: "card-img-top") %>
-          <% elsif @cocktail.id == 5 %>
-            <%= cl_image_tag("vi05oda4ue5syczmbdrx", width: 400, crop: :fill, class: "card-img-top") %>
-          <% elsif @cocktail.id == 6 %>
-            <%= cl_image_tag("ifsoadbabeekoylisgko", width: 400, crop: :fill, class: "card-img-top") %>
-          <% elsif @cocktail.id == 7 %>
-            <%= cl_image_tag("useht7uyfpewjotxxoge", width: 400, crop: :fill, class: "card-img-top") %>
+  <h1>My Cocktail</h1>
+  <div class="row">
+  <div class="col-6 col-sm-6 col-lg-4">
+    <div class="card my-3" style="width: 32rem;">
 
-          <% end %>
+       <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
 
-    <div class="card-body">
-        <h5 class="card-title text-align-center"><%= @cocktail.name %></h5>
-        <p class="card-text">
-          <% @cocktail.doses.each do |dose| %>
-           <div class="d-flex justify-content-between">
-              <div class="d-flex text-success">
-                <div class="px-3">
-                <i class="fas fa-glass-martini-alt"></i>
+
+      <div class="card-body">
+          <h5 class="card-title text-align-center"><%= @cocktail.name %></h5>
+          <p class="card-text">
+            <% @cocktail.doses.each do |dose| %>
+             <div class="d-flex justify-content-between">
+                <div class="d-flex text-success">
+                  <div class="px-3">
+                  <i class="fas fa-glass-martini-alt"></i>
+                  </div>
+                  <%= dose.description %>
                 </div>
-                <%= dose.description %>
-              </div>
-              <div class="d-flex text-primary">
-                <div class="px-3">
-                <i class="fas fa-shopping-basket"></i>
+                <div class="d-flex text-primary">
+                  <div class="px-3">
+                  <i class="fas fa-shopping-basket"></i>
+                  </div>
+                  <%= dose.ingredient.name %>
                 </div>
-                <%= dose.ingredient.name %>
-              </div>
-              <div class="ml-5">
-                <%= link_to dose_path(dose),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } do %>
-                  <i class="text-danger fas fa-trash-alt"></i>
-                <% end %>
-              </div>
-           </div>
-          <% end %>
-        </p>
-          <%= link_to new_cocktail_dose_path(@cocktail), class: "btn btn-lg btn-block btn-primary" do %>
-            <i class="fas fa-plus"></i>   Add Dose
-          <% end %>
+                <div class="ml-5">
+                  <%= link_to dose_path(dose),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } do %>
+                    <i class="text-danger fas fa-trash-alt"></i>
+                  <% end %>
+                </div>
+             </div>
+            <% end %>
+          </p>
+            <%= link_to new_cocktail_dose_path(@cocktail), class: "btn btn-lg btn-block btn-primary" do %>
+              <i class="fas fa-plus"></i>   Add Dose
+            <% end %>
 
 
+      </div>
     </div>
+  </div>
   </div>
 </div>
